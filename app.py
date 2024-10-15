@@ -5,7 +5,6 @@ from controllers.task_controller import *
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123@172.17.0.2:3306/isbn'
 db.init_app(app)
-
 app.register_blueprint(task_blueprint)
 
 if __name__ == '__main__':
